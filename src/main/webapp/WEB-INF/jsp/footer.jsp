@@ -21,15 +21,5 @@ pageEncoding="UTF-8"%>
 <c:if test='${result ne null }'>
 하하하
 </c:if>
-
-<!-- paging S-->
-<c:if test='${page.prevPage != 1}'>
-[이전]
-</c:if>
-<c:forEach var="i" begin="${page.blockBegin }" end="${page.blockEnd }" step="1" varStatus="status">
-      <c:out value="${page.blockBegin + status.count - 1} " />
-    </c:forEach>
-
-<!-- paging E-->
 </body>
 </html>

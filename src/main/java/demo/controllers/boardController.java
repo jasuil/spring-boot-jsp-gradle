@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import demo.domain.BoardPager;
 import demo.repository.boardRepository;
 
 @Controller
@@ -22,6 +23,9 @@ public class boardController {
     public String demo(Model model) {
 
     	logger.info("demo page");
+    	
+    	BoardPager pager = new BoardPager(1200, 12);
+    	model.addAttribute("page", pager);
         model.addAttribute("result", demoRepository.getUserList());
         return "demo";
     }
