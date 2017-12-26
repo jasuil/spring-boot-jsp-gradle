@@ -10,11 +10,16 @@ pageEncoding="UTF-8"%>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+<script src="/js/jquery321.js"></script>
+<script src="/js/bootstrap.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
 ${result }
 
 <c:out value="${result }"></c:out>
+<c:if test='${result ne null }'>
+하하하
+</c:if>
 </body>
 </html>
